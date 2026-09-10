@@ -1,4 +1,4 @@
-#Q4. Remove duplicate elements from a sorted array and return the new length.
+#Remove duplicate elements from a sorted array and return the new length.
 # Input: [1, 1, 2, 2, 3, 4, 4, 5]
 # Output: [1, 2, 3, 4, 5], Length = 5
 #nums=[1, 1, 2, 2, 3, 4, 4, 5]
@@ -13,7 +13,7 @@ print(nums)
 
 #Two Pointer
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums):
         if not nums:
             return 0
         

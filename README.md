@@ -6,5 +6,6 @@ It Include:-
 <li>Array</li>
 <li>Linked List</li>
 <li>HashMaps</li>
-<li>ALgorithms</li>
+<li>Searching ALgorithms</li>
+<li>Sort ALgorithms</li>
 </ul>

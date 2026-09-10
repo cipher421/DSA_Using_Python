@@ -1,4 +1,4 @@
-#Q3. Find the second largest element in an array (considering no duplicates).
+#Find the second largest element in an array (considering no duplicates).
 # Input: [10, 5, 8, 20, 2, 15]
 # Output: 15
 
