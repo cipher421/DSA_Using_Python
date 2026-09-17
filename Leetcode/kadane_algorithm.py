@@ -22,8 +22,10 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 nums = [-2,1,-3,4,-1,2,1,-5,4]
 
 current_sum=maximum_sum=nums[0]
+# Keep the best subarray ending at the current position.
 for num in nums[1:]:
     current_sum=max(num,current_sum+num)
+    # Record the best subarray found anywhere in the array.
     maximum_sum=max(maximum_sum,current_sum)
 
 print(maximum_sum)

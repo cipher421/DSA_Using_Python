@@ -1,8 +1,10 @@
 def partition(arr, p, q):
+    # Use the first value as a pivot and place it in its final position.
     x = arr[p]          
     i = p               
     for j in range(p + 1, q + 1):
         if arr[j] <= x:
+            # Keep values smaller than or equal to the pivot on its left.
             i += 1
             arr[i], arr[j] = arr[j], arr[i]
     arr[i], arr[p] = arr[p], arr[i]   
@@ -10,6 +12,7 @@ def partition(arr, p, q):
 
 def quick_sort(arr, p, q):
     if p < q:                         
+        # Recursively sort the sections on either side of the pivot.
         partitionindex = partition(arr, p, q)
         quick_sort(arr, p, partitionindex - 1)
         quick_sort(arr, partitionindex + 1, q)

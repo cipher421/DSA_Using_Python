@@ -2,8 +2,10 @@
 
 def rotate(nums,k):
     n=len(nums)
+    # Rotating by the array length returns the original array.
     k%=n
     def reverse(l,r):
+        # Reversing three sections performs the rotation in place.
         while l<r:
             nums[l],nums[r]=nums[r],nums[l]
             l+=1

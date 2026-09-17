@@ -27,10 +27,12 @@ def isvalid(s):
     map={")":"(" , "}":"{" , "]":"["}
     for char in s:
         if char in map:
+            # The newest opening bracket must match the current closing bracket.
             top=stack.pop()  if stack else '#'
             if map[char]!=top:
                 return False
         else:
+            # Save opening brackets until their matching close is found.
             stack.append(char)
     return len(stack)==0
 

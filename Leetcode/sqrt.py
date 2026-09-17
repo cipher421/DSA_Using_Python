@@ -27,6 +27,7 @@ def sqrt(n):
         return n
 
     i=1
+    # Stop at the first square larger than n; the previous value is the answer.
     while i*i<=n:
         i+=1
     return i-1

@@ -22,6 +22,7 @@ def merge(nums1,nums2):
     i=j=k=0
     merged=[0]*(a+b)
 
+    # Always copy the smaller front value to keep the merged array sorted.
     while i<a and j<b:
         if nums1[i]<nums2[j]:
             merged[k]=nums1[i]
@@ -31,6 +32,7 @@ def merge(nums1,nums2):
             j+=1
         k+=1
 
+    # Append the remaining values from either array.
     while i<a:
         merged[k]=nums1[i]
         i+=1
@@ -44,6 +46,7 @@ def merge(nums1,nums2):
     n = a + b
     mid = n // 2
     if n % 2 == 0:      
+        # An even-length array has two middle values.
         return (merged[mid - 1] + merged[mid]) / 2
     else:
         return merged[mid]

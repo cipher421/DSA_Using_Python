@@ -28,6 +28,7 @@ if x < 0:
 reverse = 0
 xcopy = x
 
+# Build the reversed number one digit at a time.
 while x > 0:
     reverse = (reverse * 10) + (x % 10)
     x //= 10

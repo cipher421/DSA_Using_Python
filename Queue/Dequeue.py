@@ -6,12 +6,14 @@ class dequeue:
         return len(self.item)==0
 
     def insertAtEnd(self,value):
+        # A deque allows insertion at either end.
         self.item.append(value)
 
     def deleteAtFront(self):
         if (self.isEmpty()):
             raise Exception("Queue is empty")
         else:
+            # Remove the oldest value from the front.
             return self.item.pop(0)
 
     def InsertAtFront(self,value):
@@ -21,6 +23,7 @@ class dequeue:
         if (self.isEmpty()):
             raise Exception("Queue is empty")
         else:
+            # Remove the newest value from the back.
             return self.item.pop()
 
 q=dequeue()

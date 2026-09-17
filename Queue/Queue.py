@@ -6,12 +6,14 @@ class Queue:
         return len(self.item)==0
 
     def insert(self,value):
+        # Add new values at the back of the queue.
         self.item.append(value)
 
     def pop(self):
         if (self.isEmpty()):
             raise Exception("Queue is empty")
         else:
+            # Removing from the front preserves first-in, first-out order.
             return self.item.pop(0)
 
 

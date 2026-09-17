@@ -9,12 +9,14 @@ You repeat the following procedure n / 2 times:
 Return the minimum element in averages.
 """
 def minimumAverage(nums):
+    # Sorting makes the smallest and largest remaining values easy to pair.
     nums.sort()
     average=[]
     left=0
     right=len(nums)-1
 
     while left<right:
+        # Remove one value from each end and store their average.
         avg=(nums[left]+nums[right])/2
         left+=1
         right-=1

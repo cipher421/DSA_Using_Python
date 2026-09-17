@@ -35,10 +35,12 @@ class Solution:
         quotient = 0
         while dividend >= divisor:
             temp, multiple = divisor, 1
+            # Double the divisor to subtract the largest possible chunk.
             while dividend >= (temp << 1):
                 temp <<= 1
                 multiple <<= 1
             dividend -= temp
             quotient += multiple
         
+        # Apply the sign after calculating with positive values.
         return -quotient if negative else quotient

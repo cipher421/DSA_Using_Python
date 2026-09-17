@@ -21,4 +21,5 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 x = 2 
 n = 10
 
+# Python's exponent operator calculates x raised to the power n.
 print(x**n)

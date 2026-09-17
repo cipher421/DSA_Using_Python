@@ -2,6 +2,7 @@
 num=[1, 1, 2, 2, 3, 4, 4, 5]
 even=0
 odd=0
+# The remainder after division by 2 tells whether a number is even or odd.
 for i in num:
     if i%2==0:
         even+=1

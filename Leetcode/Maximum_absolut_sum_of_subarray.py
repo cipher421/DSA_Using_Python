@@ -27,6 +27,7 @@ class Solution:
         max_prefix = min_prefix = 0
         for num in nums:
             prefix += num
+            # The largest difference between prefix sums is the max absolute sum.
             max_prefix = max(max_prefix, prefix)
             min_prefix = min(min_prefix, prefix)
         return max_prefix - min_prefix

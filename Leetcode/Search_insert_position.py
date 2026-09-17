@@ -24,6 +24,7 @@ def search(nums,target):
     right=len(nums)-1
 
     while left<=right:
+        # Binary search removes half of the possible positions each iteration.
         mid = left + (right - left) // 2
         if nums[mid]==target:
             return mid
@@ -32,6 +33,7 @@ def search(nums,target):
         elif nums[mid]>target:
             right=mid-1
 
+    # left is the first position where target can be inserted.
     return left
 
 nums = [1,3,5,6,7]

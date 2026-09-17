@@ -4,6 +4,7 @@ n=[5, 2, 9, 1, 7, 3]
 min=sys.maxsize
 max=1-sys.maxsize
 
+# Update each boundary whenever a more extreme value is found.
 for i in n:
     if i<min:
         min=i

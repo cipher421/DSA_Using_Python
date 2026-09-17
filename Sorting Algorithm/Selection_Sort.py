@@ -2,6 +2,7 @@ def selection_sort(arr):
     n=len(arr)
     for i in range(0,n-1):
         indexmin=i
+        # Find the smallest value in the unsorted portion.
         for j in range(i+1,n):
             if(arr[j]<arr[indexmin]):
                 indexmin=j

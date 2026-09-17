@@ -24,9 +24,11 @@ def maxprofit(nums):
     min_price=float('inf')
     max_profit=0
     for price in prices:
+        # Keep the cheapest buying price seen before the current day.
         if price<min_price:
             min_price=price
         else:
+            # Selling today is compared with the best profit found so far.
             max_profit=max(max_profit,price-min_price)
     return max_profit
 

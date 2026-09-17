@@ -43,6 +43,7 @@ punctuation = [
 def isPalindrome(s):
     left,right=0,len(s)-1
     while left<right:
+        # Skip punctuation, then compare characters from both ends inward.
         while left<right and not s[left].isalnum():
             left+=1
         while left<right and not s[right].isalnum():

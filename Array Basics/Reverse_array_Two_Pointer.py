@@ -5,6 +5,7 @@
 
 n=[1, 2, 3, 4, 5]
 j=len(n)-1
+# Swap matching values from the two ends until the pointers meet.
 for i in range(len(n)//2):
     if n[j]>n[i]:
         n[i], n[j] = n[j], n[i]

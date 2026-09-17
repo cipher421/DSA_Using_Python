@@ -1,6 +1,7 @@
 #Given an array and a target value, find whether the target exists in the array. Return its index if found, otherwise return -1.
 
 def linear_search(arr,element):
+    # Check each item in order until the target is found.
     for i in range(0,len(arr)):
         if arr[i]==element:
             return i

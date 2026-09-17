@@ -2,9 +2,9 @@ def search(nums,target):
     left=0
     right=len(nums)-1
 
-    mid = left + (right - left) // 2
-
     while left<=right:
+        # Search the middle value and discard the half that cannot contain the target.
+        mid = left + (right - left) // 2
         if nums[mid]==target:
             return mid
         elif nums[mid]<target:

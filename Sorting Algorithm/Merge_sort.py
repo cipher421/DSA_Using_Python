@@ -4,6 +4,7 @@ def merge(nums1,nums2):
     i=j=k=0
     merged=[0]*(a+b)
 
+    # Compare the front values and copy the smaller one into the result.
     while i<a and j<b:
         if nums1[i]<nums2[j]:
             merged[k]=nums1[i]
@@ -13,11 +14,13 @@ def merge(nums1,nums2):
             j+=1
         k+=1
 
+    # Copy any values left in the first array.
     while i<a:
         merged[k]=nums1[i]
         i+=1
         k+=1
 
+    # Copy any values left in the second array.
     while j<b:
         merged[k]=nums2[j]
         j+=1
